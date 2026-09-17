@@ -1,0 +1,1306 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Detaycım | Seramik Kaplama Bursa</title>
+<meta name="description" content="Detaycım Seramik Kaplama için hazırlanmış premium web sitesi tasarım önizlemesi.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
+
+<style>
+:root{
+ --bg:#05080b;
+ --panel:#0a1015;
+ --panel2:#0d151c;
+ --white:#f5f4f0;
+ --muted:#8f9aa3;
+ --accent:#ff7a24;
+ --accent2:#ffc08a;
+ --line:rgba(255,255,255,.11);
+ --max:1260px;
+}
+
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+
+body{
+ background:var(--bg);
+ color:var(--white);
+ font-family:Inter,sans-serif;
+ overflow-x:hidden;
+}
+
+a{text-decoration:none;color:inherit}
+img{display:block;width:100%}
+
+.container{
+ width:min(var(--max),calc(100% - 44px));
+ margin:auto;
+}
+
+/* NAV */
+
+nav{
+ position:fixed;
+ top:0;left:0;right:0;
+ height:76px;
+ z-index:1000;
+ background:rgba(5,8,11,.78);
+ backdrop-filter:blur(18px);
+ border-bottom:1px solid var(--line);
+}
+
+.nav-inner{
+ width:min(var(--max),calc(100% - 44px));
+ height:100%;
+ margin:auto;
+ display:flex;
+ align-items:center;
+ justify-content:space-between;
+}
+
+.logo{
+ font-family:Montserrat,sans-serif;
+ font-size:22px;
+ font-weight:800;
+ letter-spacing:-1px;
+}
+
+.logo span{color:var(--accent)}
+
+.nav-links{
+ display:flex;
+ align-items:center;
+ gap:27px;
+ font-size:11px;
+ font-weight:700;
+ text-transform:uppercase;
+ letter-spacing:1px;
+}
+
+.nav-links a{
+ opacity:.75;
+ transition:.25s;
+}
+
+.nav-links a:hover{
+ opacity:1;
+ color:var(--accent);
+}
+
+.nav-cta{
+ padding:12px 18px;
+ border:1px solid var(--accent);
+ color:var(--accent)!important;
+}
+
+/* HERO */
+
+.hero{
+ min-height:100vh;
+ padding-top:76px;
+ position:relative;
+ display:flex;
+ align-items:flex-end;
+ overflow:hidden;
+}
+
+.hero-bg{
+ position:absolute;
+ inset:0;
+ background:
+ linear-gradient(90deg,rgba(3,6,9,.97),rgba(3,6,9,.55),rgba(3,6,9,.18)),
+ linear-gradient(0deg,#05080b,transparent 45%),
+ url("https://images.unsplash.com/photo-1503736334956-4c8f8e92946d?auto=format&fit=crop&w=2000&q=88")
+ center/cover;
+ transform:scale(1.04);
+}
+
+.glow{
+ position:absolute;
+ width:600px;
+ height:600px;
+ right:-200px;
+ bottom:-200px;
+ border-radius:50%;
+ background:rgba(255,122,36,.13);
+ filter:blur(80px);
+}
+
+.hero-content{
+ width:min(var(--max),calc(100% - 44px));
+ margin:auto;
+ padding:105px 0 80px;
+ position:relative;
+ z-index:2;
+}
+
+.kicker{
+ color:var(--accent);
+ text-transform:uppercase;
+ letter-spacing:4px;
+ font-size:10px;
+ font-weight:700;
+ display:flex;
+ align-items:center;
+ gap:12px;
+ margin-bottom:25px;
+}
+
+.kicker:before{
+ content:"";
+ width:40px;
+ height:1px;
+ background:var(--accent);
+}
+
+.hero h1{
+ font-family:Montserrat,sans-serif;
+ font-size:clamp(58px,10vw,135px);
+ line-height:.83;
+ letter-spacing:-7px;
+ text-transform:uppercase;
+ max-width:1100px;
+}
+
+.hero h1 span{
+ color:transparent;
+ -webkit-text-stroke:1px rgba(255,192,138,.8);
+}
+
+.hero-bottom{
+ display:flex;
+ justify-content:space-between;
+ align-items:flex-end;
+ gap:50px;
+ margin-top:48px;
+}
+
+.hero-copy{
+ max-width:570px;
+ color:#b6bdc2;
+ line-height:1.8;
+ font-size:15px;
+}
+
+.actions{
+ display:flex;
+ gap:10px;
+ flex-wrap:wrap;
+}
+
+.btn{
+ min-height:54px;
+ padding:0 23px;
+ display:inline-flex;
+ align-items:center;
+ justify-content:center;
+ border:1px solid var(--line);
+ font-size:11px;
+ font-weight:700;
+ text-transform:uppercase;
+ letter-spacing:1px;
+ transition:.25s;
+}
+
+.btn-primary{
+ background:var(--accent);
+ border-color:var(--accent);
+ color:#080808;
+}
+
+.btn:hover{transform:translateY(-3px)}
+
+.btn-primary:hover{
+ background:#fff;
+ border-color:#fff;
+}
+
+.btn-outline:hover{
+ border-color:var(--accent);
+ color:var(--accent);
+}
+
+/* MARQUEE */
+
+.marquee{
+ overflow:hidden;
+ background:#080d11;
+ border-top:1px solid var(--line);
+ border-bottom:1px solid var(--line);
+}
+
+.track{
+ width:max-content;
+ display:flex;
+ animation:move 27s linear infinite;
+}
+
+.track span{
+ padding:19px 32px;
+ white-space:nowrap;
+ color:#75808a;
+ font-size:11px;
+ font-weight:700;
+ letter-spacing:2px;
+ text-transform:uppercase;
+}
+
+.track b{color:var(--accent)}
+
+@keyframes move{
+ to{transform:translateX(-50%)}
+}
+
+/* GENERAL */
+
+section{padding:120px 0}
+
+.section-head{
+ display:grid;
+ grid-template-columns:.55fr 1.45fr;
+ gap:70px;
+ margin-bottom:68px;
+}
+
+.number{
+ color:var(--accent);
+ font-size:10px;
+ letter-spacing:3px;
+ text-transform:uppercase;
+}
+
+h2{
+ font-family:Montserrat,sans-serif;
+ font-size:clamp(42px,6.3vw,82px);
+ line-height:.92;
+ letter-spacing:-4px;
+ text-transform:uppercase;
+}
+
+.description{
+ max-width:620px;
+ color:var(--muted);
+ line-height:1.8;
+ margin-top:24px;
+}
+
+/* BRAND */
+
+.brand{background:#080c10}
+
+.brand-grid{
+ display:grid;
+ grid-template-columns:1.25fr .75fr;
+ gap:12px;
+}
+
+.brand-image{
+ min-height:620px;
+ position:relative;
+ overflow:hidden;
+}
+
+.brand-image img{
+ height:100%;
+ object-fit:cover;
+ transition:.7s;
+}
+
+.brand-image:hover img{transform:scale(1.04)}
+
+.image-tag{
+ position:absolute;
+ left:20px;
+ bottom:20px;
+ padding:13px 16px;
+ background:rgba(5,8,11,.82);
+ backdrop-filter:blur(12px);
+ border-left:3px solid var(--accent);
+ font-size:9px;
+ letter-spacing:2px;
+ text-transform:uppercase;
+}
+
+.brand-card{
+ min-height:620px;
+ background:var(--panel);
+ border:1px solid var(--line);
+ padding:38px;
+ display:flex;
+ flex-direction:column;
+ justify-content:space-between;
+}
+
+.brand-card strong{
+ font-family:Montserrat,sans-serif;
+ font-size:64px;
+ color:var(--accent);
+}
+
+.brand-card h3{
+ font-family:Montserrat,sans-serif;
+ font-size:31px;
+ text-transform:uppercase;
+ margin-bottom:18px;
+}
+
+.brand-card p{
+ color:var(--muted);
+ line-height:1.8;
+ font-size:14px;
+}
+
+/* SERVICES */
+
+.services-grid{
+ display:grid;
+ grid-template-columns:repeat(2,1fr);
+ gap:12px;
+}
+
+.service{
+ min-height:340px;
+ border:1px solid var(--line);
+ padding:35px;
+ background:linear-gradient(145deg,#0c1319,#080c10);
+ display:flex;
+ flex-direction:column;
+ justify-content:space-between;
+ transition:.3s;
+}
+
+.service:hover{
+ transform:translateY(-4px);
+ border-color:rgba(255,122,36,.55);
+}
+
+.service-top{
+ display:flex;
+ justify-content:space-between;
+ color:var(--accent);
+ font-size:10px;
+ letter-spacing:2px;
+ text-transform:uppercase;
+}
+
+.service h3{
+ font-family:Montserrat,sans-serif;
+ font-size:30px;
+ text-transform:uppercase;
+ margin-bottom:15px;
+}
+
+.service p{
+ color:var(--muted);
+ max-width:490px;
+ line-height:1.75;
+ font-size:14px;
+}
+
+/* CERAMIC */
+
+.ceramic{
+ min-height:760px;
+ display:flex;
+ align-items:center;
+ background:
+ linear-gradient(90deg,rgba(4,7,10,.96),rgba(4,7,10,.22)),
+ url("https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=2000&q=88")
+ center/cover;
+}
+
+.ceramic-content{max-width:800px}
+
+.ceramic p{
+ color:#c0c5c8;
+ max-width:590px;
+ line-height:1.8;
+ margin:28px 0;
+}
+
+/* GALLERY */
+
+.gallery{background:#080c10}
+
+.gallery-grid{
+ display:grid;
+ grid-template-columns:1.3fr .7fr .7fr;
+ grid-auto-rows:300px;
+ gap:10px;
+}
+
+.gallery-item{
+ overflow:hidden;
+}
+
+.gallery-item:first-child{
+ grid-row:span 2;
+}
+
+.gallery-item:nth-child(4){
+ grid-column:span 2;
+}
+
+.gallery-item img{
+ height:100%;
+ object-fit:cover;
+ filter:saturate(.75);
+ transition:.6s;
+}
+
+.gallery-item:hover img{
+ transform:scale(1.05);
+ filter:saturate(1);
+}
+
+/* EXPERIENCE */
+
+.experience{
+ display:grid;
+ grid-template-columns:repeat(4,1fr);
+ border:1px solid var(--line);
+}
+
+.exp{
+ min-height:310px;
+ padding:30px 25px;
+ border-right:1px solid var(--line);
+ display:flex;
+ flex-direction:column;
+ justify-content:space-between;
+}
+
+.exp:last-child{border-right:0}
+
+.exp strong{
+ color:var(--accent);
+ font-family:Montserrat,sans-serif;
+ font-size:43px;
+}
+
+.exp h3{
+ font-family:Montserrat,sans-serif;
+ text-transform:uppercase;
+ font-size:21px;
+ margin-bottom:10px;
+}
+
+.exp p{
+ color:var(--muted);
+ line-height:1.7;
+ font-size:13px;
+}
+
+/* CTA */
+
+.cta{
+ background:var(--accent);
+ color:#07090b;
+}
+
+.cta-inner{
+ display:flex;
+ justify-content:space-between;
+ align-items:flex-end;
+ gap:40px;
+}
+
+.cta h2{max-width:880px}
+
+.cta .btn{
+ border-color:#080808;
+ color:#080808;
+ min-width:205px;
+}
+
+.cta .btn:hover{
+ background:#080808;
+ color:#fff;
+}
+
+/* CONTACT */
+
+.contact{background:#06090c}
+
+.contact-grid{
+ display:grid;
+ grid-template-columns:1fr 1fr;
+ gap:80px;
+}
+
+.contact-copy p{
+ max-width:520px;
+ color:var(--muted);
+ line-height:1.8;
+ margin-top:25px;
+}
+
+.contact-list{
+ display:grid;
+ gap:10px;
+}
+
+.contact-card{
+ border:1px solid var(--line);
+ min-height:90px;
+ padding:22px 24px;
+ display:flex;
+ justify-content:space-between;
+ align-items:center;
+ transition:.25s;
+}
+
+.contact-card:hover{
+ border-color:var(--accent);
+ background:#0b1116;
+}
+
+.contact-card small{
+ display:block;
+ color:#747d84;
+ text-transform:uppercase;
+ letter-spacing:1.8px;
+ font-size:9px;
+ margin-bottom:8px;
+}
+
+.contact-card strong{font-size:16px}
+
+.arrow{
+ color:var(--accent);
+ font-size:24px;
+}
+
+/* DISCLAIMER */
+
+.preview{
+ padding:27px 20px;
+ text-align:center;
+ border-top:1px solid var(--line);
+ background:#040607;
+ color:#737b81;
+ font-size:11px;
+ line-height:1.8;
+}
+
+.preview strong{
+ color:#d6d8d8;
+ letter-spacing:1px;
+}
+
+/* FOOTER */
+
+footer{
+ border-top:1px solid var(--line);
+ padding:35px 0;
+}
+
+.footer{
+ width:min(var(--max),calc(100% - 44px));
+ margin:auto;
+ display:flex;
+ justify-content:space-between;
+ gap:20px;
+ color:#687178;
+ text-transform:uppercase;
+ font-size:10px;
+ letter-spacing:1px;
+}
+
+.footer-logo{
+ color:#fff;
+ font-family:Montserrat,sans-serif;
+ font-weight:800;
+}
+
+.footer-logo span{color:var(--accent)}
+
+.mobile-bar{display:none}
+
+/* ANIMATION */
+
+.reveal{
+ opacity:0;
+ transform:translateY(30px);
+ transition:.75s ease;
+}
+
+.reveal.show{
+ opacity:1;
+ transform:none;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+ .nav-links a:not(.nav-cta){display:none}
+
+ .section-head,
+ .brand-grid,
+ .contact-grid{
+   grid-template-columns:1fr;
+ }
+
+ .services-grid{grid-template-columns:1fr}
+
+ .experience{grid-template-columns:1fr 1fr}
+
+ .exp:nth-child(2){border-right:0}
+
+ .exp{border-bottom:1px solid var(--line)}
+
+ .hero-bottom,
+ .cta-inner{
+   flex-direction:column;
+   align-items:flex-start;
+ }
+
+ .gallery-grid{grid-template-columns:1fr 1fr}
+
+ .gallery-item:first-child{grid-column:span 2}
+
+ .gallery-item:nth-child(4){grid-column:auto}
+}
+
+@media(max-width:600px){
+
+ body{padding-bottom:66px}
+ nav{height:68px}
+
+ .container,
+ .nav-inner,
+ .hero-content{
+   width:calc(100% - 28px);
+ }
+
+ .hero h1{
+   font-size:clamp(57px,18vw,88px);
+   letter-spacing:-4px;
+ }
+
+ .hero-content{padding-bottom:55px}
+
+ section{padding:82px 0}
+
+ .actions,.actions .btn{width:100%}
+
+ .brand-image,
+ .brand-card{min-height:430px}
+
+ .gallery-grid{
+   grid-template-columns:1fr;
+   grid-auto-rows:290px;
+ }
+
+ .gallery-item:first-child,
+ .gallery-item:nth-child(4){
+   grid-column:auto;
+   grid-row:auto;
+ }
+
+ .experience{grid-template-columns:1fr}
+
+ .exp{border-right:0}
+
+ .footer{flex-direction:column}
+
+ .mobile-bar{
+   display:grid;
+   grid-template-columns:1fr 1fr;
+   position:fixed;
+   left:0;right:0;bottom:0;
+   height:66px;
+   z-index:1200;
+   background:#05080b;
+   border-top:1px solid var(--line);
+ }
+
+ .mobile-bar a{
+   display:flex;
+   align-items:center;
+   justify-content:center;
+   text-transform:uppercase;
+   font-size:11px;
+   font-weight:700;
+ }
+
+ .mobile-bar a:first-child{
+   background:var(--accent);
+   color:#080808;
+ }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+<div class="nav-inner">
+
+<a class="logo" href="#home">
+DETAY<span>CIM.</span>
+</a>
+
+<div class="nav-links">
+<a href="#about">Hakkında</a>
+<a href="#services">Hizmetler</a>
+<a href="#works">Çalışmalar</a>
+<a href="#contact">İletişim</a>
+
+<a href="tel:+905325580812" class="nav-cta">
+Bize Ulaşın
+</a>
+</div>
+
+</div>
+</nav>
+
+<header class="hero" id="home">
+
+<div class="hero-bg"></div>
+<div class="glow"></div>
+
+<div class="hero-content">
+
+<div class="kicker">
+Yıldırım · Bursa
+</div>
+
+<h1>
+SHINE.<br>
+PROTECT.<br>
+<span>DETAIL.</span>
+</h1>
+
+<div class="hero-bottom">
+
+<p class="hero-copy">
+Detaycım için hazırlanmış premium otomotiv web deneyimi.
+Araç çalışmalarının güçlü görsellerle sergilenebileceği,
+hizmetlerin düzenli sunulabileceği ve müşterilerin işletmeye
+kolayca ulaşabileceği modern bir dijital vitrin.
+</p>
+
+<div class="actions">
+
+<a href="#works" class="btn btn-primary">
+Çalışmaları Gör →
+</a>
+
+<a href="#contact" class="btn btn-outline">
+İletişim
+</a>
+
+</div>
+
+</div>
+</div>
+</header>
+
+<div class="marquee">
+<div class="track">
+
+<span><b>DETAYCIM</b> · CERAMIC · AUTOMOTIVE · BURSA · DETAIL · PROTECTION ·</span>
+<span><b>DETAYCIM</b> · CERAMIC · AUTOMOTIVE · BURSA · DETAIL · PROTECTION ·</span>
+<span><b>DETAYCIM</b> · CERAMIC · AUTOMOTIVE · BURSA · DETAIL · PROTECTION ·</span>
+<span><b>DETAYCIM</b> · CERAMIC · AUTOMOTIVE · BURSA · DETAIL · PROTECTION ·</span>
+
+</div>
+</div>
+
+<section class="brand" id="about">
+<div class="container">
+
+<div class="section-head reveal">
+
+<div class="number">
+01 / Detaycım
+</div>
+
+<div>
+
+<h2>
+PARLAKLIK<br>
+BİR SONUÇTUR.
+</h2>
+
+<p class="description">
+Detaycım'ın otomotiv çalışmalarını modern ve premium bir
+dijital kimlikle sunabilmesi için hazırlanan tasarım konsepti.
+Gerçek işletme içerikleriyle tamamen kişiselleştirilebilir.
+</p>
+
+</div>
+</div>
+
+<div class="brand-grid reveal">
+
+<div class="brand-image">
+
+<img
+src="https://images.unsplash.com/photo-1542362567-b07e54358753?auto=format&fit=crop&w=1500&q=88"
+alt="Temsili otomobil">
+
+<div class="image-tag">
+Surface / Finish / Automotive
+</div>
+
+</div>
+
+<div class="brand-card">
+
+<strong>01.</strong>
+
+<div>
+
+<h3>Detayda Fark.</h3>
+
+<p>
+İşletmenin yaklaşımını, araçlara gösterdiği özeni ve
+gerçek çalışmalarını müşterilere güçlü bir görsel dil
+üzerinden anlatabileceği marka alanı.
+</p>
+
+</div>
+
+</div>
+
+</div>
+</div>
+</section>
+
+<section id="services">
+<div class="container">
+
+<div class="section-head reveal">
+
+<div class="number">
+02 / Hizmet Alanları
+</div>
+
+<div>
+
+<h2>
+YÜZEYDEN<br>
+DAHA FAZLASI.
+</h2>
+
+<p class="description">
+Aşağıdaki alanlar tasarım önizlemesi amacıyla hazırlanmıştır.
+Nihai projede Detaycım'ın doğruladığı güncel hizmetler,
+paketler ve uygulamalarla tamamen güncellenebilir.
+</p>
+
+</div>
+</div>
+
+<div class="services-grid reveal">
+
+<article class="service">
+
+<div class="service-top">
+<span>01</span>
+<span>Ceramic</span>
+</div>
+
+<div>
+
+<h3>Seramik Kaplama</h3>
+
+<p>
+İşletmenin seramik kaplama uygulamalarının, süreçlerinin
+ve gerçek araç sonuçlarının profesyonel şekilde
+sergilenebileceği bölüm.
+</p>
+
+</div>
+</article>
+
+<article class="service">
+
+<div class="service-top">
+<span>02</span>
+<span>Exterior</span>
+</div>
+
+<div>
+
+<h3>Dış Detay</h3>
+
+<p>
+Doğrulanmış dış bakım ve araç görünüm uygulamalarının
+fotoğraflar ve açıklamalarla sunulabileceği alan.
+</p>
+
+</div>
+</article>
+
+<article class="service">
+
+<div class="service-top">
+<span>03</span>
+<span>Interior</span>
+</div>
+
+<div>
+
+<h3>İç Detay</h3>
+
+<p>
+İşletmenin sunduğu doğrulanmış iç mekân uygulamalarını
+müşterilere düzenli şekilde gösterebilmek için hazırlanmış alan.
+</p>
+
+</div>
+</article>
+
+<article class="service">
+
+<div class="service-top">
+<span>04</span>
+<span>Custom</span>
+</div>
+
+<div>
+
+<h3>Özel Uygulamalar</h3>
+
+<p>
+Detaycım'ın güncel özel uygulamaları, paketleri ve araç
+projeleri için tamamen özelleştirilebilir içerik bölümü.
+</p>
+
+</div>
+</article>
+
+</div>
+</div>
+</section>
+
+<section class="ceramic">
+
+<div class="container">
+
+<div class="ceramic-content reveal">
+
+<div class="kicker">
+Premium Surface Experience
+</div>
+
+<h2>
+IŞIĞI<br>
+YAKALAYIN.
+</h2>
+
+<p>
+Detaycım'ın gerçek araç ve uygulama fotoğrafları kullanıldığında
+bu alan müşterilerin yapılan çalışmaların sonuçlarını büyük
+görseller üzerinden inceleyebileceği premium bir dijital showrooma dönüşebilir.
+</p>
+
+<a href="#works" class="btn btn-primary">
+Showroom →
+</a>
+
+</div>
+</div>
+</section>
+
+<section class="gallery" id="works">
+<div class="container">
+
+<div class="section-head reveal">
+
+<div class="number">
+03 / Çalışmalar
+</div>
+
+<div>
+
+<h2>
+SONUCU<br>
+GÖSTERİN.
+</h2>
+
+<p class="description">
+Bu tasarım önizlemesindeki araç fotoğrafları temsilîdir.
+Nihai web sitesinde bu alan Detaycım'ın izin verilen gerçek
+araç ve uygulama fotoğraflarıyla değiştirilebilir.
+</p>
+
+</div>
+</div>
+
+<div class="gallery-grid reveal">
+
+<div class="gallery-item">
+<img
+src="https://images.unsplash.com/photo-1504215680853-026ed2a45def?auto=format&fit=crop&w=1500&q=88"
+alt="Temsili araç">
+</div>
+
+<div class="gallery-item">
+<img
+src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=900&q=88"
+alt="Temsili araç">
+</div>
+
+<div class="gallery-item">
+<img
+src="https://images.unsplash.com/photo-1502877338535-766e1452684a?auto=format&fit=crop&w=900&q=88"
+alt="Temsili araç">
+</div>
+
+<div class="gallery-item">
+<img
+src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?auto=format&fit=crop&w=1300&q=88"
+alt="Temsili araç">
+</div>
+
+</div>
+</div>
+</section>
+
+<section>
+<div class="container">
+
+<div class="section-head reveal">
+
+<div class="number">
+04 / Dijital Deneyim
+</div>
+
+<div>
+
+<h2>
+KEŞFET.<br>
+İNCELE. ULAŞ.
+</h2>
+
+</div>
+</div>
+
+<div class="experience reveal">
+
+<div class="exp">
+
+<strong>01</strong>
+
+<div>
+<h3>Keşfet</h3>
+<p>
+Müşteri işletmeyi modern ve profesyonel bir dijital kimlikle tanır.
+</p>
+</div>
+
+</div>
+
+<div class="exp">
+
+<strong>02</strong>
+
+<div>
+<h3>İncele</h3>
+<p>
+Güncel hizmetleri ve gerçek araç çalışmalarını tek noktada inceleyebilir.
+</p>
+</div>
+
+</div>
+
+<div class="exp">
+
+<strong>03</strong>
+
+<div>
+<h3>Değerlendir</h3>
+<p>
+Uygulama örnekleri müşterinin hizmet hakkında daha fazla bilgi edinmesini sağlar.
+</p>
+</div>
+
+</div>
+
+<div class="exp">
+
+<strong>04</strong>
+
+<div>
+<h3>Ulaş</h3>
+<p>
+Telefon ve konum bağlantıları üzerinden işletmeyle kolayca iletişime geçebilir.
+</p>
+</div>
+
+</div>
+
+</div>
+</div>
+</section>
+
+<section class="cta">
+
+<div class="container">
+
+<div class="cta-inner reveal">
+
+<h2>
+DETAIL MAKES<br>
+THE DIFFERENCE.
+</h2>
+
+<a href="tel:+905325580812" class="btn">
+Telefonla Ulaş →
+</a>
+
+</div>
+</div>
+</section>
+
+<section class="contact" id="contact">
+<div class="container">
+
+<div class="contact-grid">
+
+<div class="contact-copy reveal">
+
+<div class="number">
+05 / İletişim
+</div>
+
+<h2>
+DETAY<br>
+CIM.
+</h2>
+
+<p>
+Detaycım Seramik Kaplama için hazırlanmış bağımsız web sitesi
+tasarım konsepti. Birlikte ilerlenmesi hâlinde gerçek işletme
+ve araç fotoğrafları, doğrulanmış güncel hizmetler ve marka
+bilgileriyle tamamlanabilir.
+</p>
+
+</div>
+
+<div class="contact-list reveal">
+
+<a href="tel:+905325580812" class="contact-card">
+
+<div>
+<small>Telefon</small>
+<strong>0532 558 08 12</strong>
+</div>
+
+<div class="arrow">↗</div>
+
+</a>
+
+<div class="contact-card">
+
+<div>
+<small>Bölge</small>
+<strong>Yıldırım · Bursa</strong>
+</div>
+
+<div class="arrow">•</div>
+
+</div>
+
+<a
+href="https://www.google.com/maps/search/?api=1&query=Detaycim+Seramik+Kaplama+Bursa"
+target="_blank"
+rel="noopener"
+class="contact-card">
+
+<div>
+<small>Harita</small>
+<strong>Yol Tarifi Al</strong>
+</div>
+
+<div class="arrow">↗</div>
+
+</a>
+
+</div>
+</div>
+</div>
+</section>
+
+<div class="preview">
+
+<strong>WEB SİTESİ TASARIM ÖNİZLEMESİ</strong><br>
+
+Bu çalışma Detaycım Seramik Kaplama için hazırlanmış bağımsız
+bir tasarım konseptidir ve işletmenin resmî web sitesi değildir.
+Kullanılan otomotiv görselleri temsilîdir. Nihai içerikler,
+fotoğraflar ve işletme bilgileri işletme onayıyla güncellenebilir.
+
+</div>
+
+<footer>
+
+<div class="footer">
+
+<div class="footer-logo">
+DETAY<span>CIM.</span>
+</div>
+
+<div>
+YILDIRIM · BURSA
+</div>
+
+<div>
+DESIGN PREVIEW
+</div>
+
+</div>
+</footer>
+
+<div class="mobile-bar">
+
+<a href="tel:+905325580812">
+Ara
+</a>
+
+<a
+href="https://www.google.com/maps/search/?api=1&query=Detaycim+Seramik+Kaplama+Bursa"
+target="_blank"
+rel="noopener">
+Konum
+</a>
+
+</div>
+
+<script>
+
+const observer = new IntersectionObserver(entries=>{
+ entries.forEach(entry=>{
+   if(entry.isIntersecting){
+     entry.target.classList.add("show");
+   }
+ });
+},{threshold:.12});
+
+document.querySelectorAll(".reveal").forEach(el=>{
+ observer.observe(el);
+});
+
+const heroBg=document.querySelector(".hero-bg");
+
+window.addEventListener("scroll",()=>{
+ if(window.innerWidth>768){
+   heroBg.style.transform=
+   `scale(1.04) translateY(${window.scrollY*.06}px)`;
+ }
+});
+
+</script>
+
+</body>
+</html>
